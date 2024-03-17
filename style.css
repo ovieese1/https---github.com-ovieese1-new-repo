@@ -267,6 +267,11 @@ main {
 
 }
 
+p {
+    margin: 0;
+    line-height: 1.6;
+}
+
 /*project page style*/
 .pro {
     width: 80%;

@@ -211,6 +211,19 @@
         }
     }
 
+    p {
+        margin-left: 5vw;
+        overflow-wrap: break-word;
+        padding-right: 3vh;
+        margin-top: 70px;
+    }
+
+    img {
+        width: 200px; 
+        height: auto;
+        margin-left: 50%;
+    }
+
     main {
         color: black;
         grid-area: main;
@@ -218,6 +231,7 @@
         align-content: center;
         margin: 0;
         margin-top: 50px;
+        height: 50px;
 
 
     }
@@ -250,147 +264,7 @@
         border-radius: 30px;
         margin: 2%;
         background-color: white;
-        
-
     }
-
-
-
-    /*Styling for contact page*/
-    /*.contact {
-        width: 650px;
-        padding: 28px;
-        margin-top: 900px;
-        margin: auto;
-        overflow: hidden;
-        border-radius: 10px;
-        background: rgba(0, 0, 0, 0.2);
-        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
-        height: 500px;
-    }
-
-    h2 {
-        font-size: 26px;
-        font-weight: bold;
-        text-align: left;
-        color: white;
-        padding-bottom: 8px;
-        border-bottom: 1px solid silver;
-    }
-
-    .content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 20px o;
-    }
-
-    .input-box {
-        display: flex;
-        flex-wrap: wrap;
-        width: 50%;
-        padding: 15px;
-    }
-
-
-    .input-box:nth-child(2) {
-        justify-content: end;
-    }
-
-    .input-box:nth-child(3) {
-        width: 150%;
-    }
-
-    .input-box input {
-        height: 40px;
-        width: 100%;
-        padding: 0 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        outline: none;
-    }
-
-    .input-box input:is(:focus, :valid) {
-        box-shadow: o 3px 6px rgba(0, 0, 0, 0.2);
-
-    }
-
-    .me {
-        margin-left: 12px;
-    }
-
-
-    .contact form textarea {
-        padding: 15px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        resize: none;
-        height: 150px;
-        width: 200%;
-        padding-left: 42px;
-        padding-right: 10px;
-        display: block;
-        margin-left: 10px;
-
-
-
-
-    }
-
-    .textarea {
-        align-items: center;
-    }
-
-    .button {
-        margin: auto; 
-        margin-top: 35px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .button button {
-        width: 120px;
-        justify-content: center;
-        justify-self: start;
-        display: block;
-        font-size: 20px;
-        color: #fff;
-        border: none;
-        border-radius: 10px;
-        background-image: linear-gradient(to right, #aa076b, #61045f);
-        cursor: pointer;
-        transition: 0.3s;
-
-    }
-
-    .button button:hover {
-        background-image: linear-gradient(to right, #61045f, #aa076b);
-    }
-
-    @media(max-width:600px) {
-        .contact {
-            min-width: 280px;
-        }
-
-        .content {
-            max-height: 380px;
-            overflow: auto;
-        }
-
-        .input-box {
-            margin-bottom: 12px;
-            width: 100%;
-        }
-
-        .input-box:nth-child(2n) {
-            justify-content: space-around;
-        }
-
-        .content::-webkit-scrollbar {
-            width: 0;
-        }
-    }*/
-
 
 
 
@@ -399,10 +273,7 @@
     .container{
         display: block;
         margin: auto;
-        width: 30%;
-        max-width: 30%;
-        min-width: 30%;
-        height: 100%;
+        width: 60%;
         border: solid 2px #120A19;
         background: rgba(0, 0, 0, 0.2);
         box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
@@ -500,9 +371,25 @@
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         padding: 40px;
         margin: 0px;
-        position: fixed;
         width: 100%;
         text-align: center;
         bottom: 0;
+        position: fixed;
 
+    }
+
+    @media only screen and (min-width: 768px) {
+       
+        .container {
+            display: block;
+            margin: auto;
+            /* width: 30%; */
+            /* max-width: 30%; */
+            /* min-width: 30%; */
+            height: 100%;
+            border: solid 2px #120A19;
+            background: rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 20px rgb(0 0 0 / 60%);
+            border-radius: 10px;
+        }
     }
