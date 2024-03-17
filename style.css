@@ -99,22 +99,14 @@ body {
     grid-area: header;
 }
 
-/* Nav menu */
-.nav{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: var(--black);
-    overflow: hidden;
+nav {
+    background-color: black;
     color: white;
     grid-area: nav;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 10px;
     margin: 0 auto;
-
-
 }
-
 
 nav ul {
     display: flex;
@@ -152,44 +144,32 @@ nav ul {
     transition: all 0.3s ease;
 }
 
-.menu a:hover{
-    background-color: var(--gray);
-}
-
-#submenu {
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 100%;
-    visibility: hidden;
-    z-index: 1;
-}
-
-li:hover ul#submenu {
-    opacity: 1;
-    top: 35px;
-    visibility: visible;
-    display: block;
-}
-
-#submenu li {
-    float: left;
-    width: 100%;
-}
-
-#submenu a:hover {
-    background: #df4b05;
-}
-
-#submenu a {
+.menu li:hover a {
     background: #34495e;
 }
+
+
 /* Logo */
 .logo{
     display: inline-block;
     color: var(--white);
     font-size: 60px;
     margin-left: 10px;
+}
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+    color: white;
+    grid-area: nav;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    margin: 0 auto;
+
+
 }
 
 
@@ -203,7 +183,7 @@ li:hover ul#submenu {
     cursor: pointer;
     float: right;
     padding: 40px 20px;
-}/* Style label    tag */
+}/* Style label tag */
 
 .hamb-line {
     background: var(--white);
@@ -236,7 +216,7 @@ li:hover ul#submenu {
 } /* Hide checkbox */
 
 
-.side-menu:checked ~ nav{
+.side-menu:checked ~ nav{ 
     max-height: 100%;
 }
 .side-menu:checked ~ .hamb .hamb-line {
@@ -258,7 +238,9 @@ li:hover ul#submenu {
         position: relative;
         float: right;
         width: fit-content;
+        display: block;
         background-color: transparent;
+        
     }
     .menu li{
         float: left;
@@ -283,6 +265,11 @@ main {
     margin-top: 50px;
 
 
+}
+
+p {
+    margin: 0;
+    line-height: 1.6;
 }
 
 /*project page style*/
@@ -428,32 +415,6 @@ h2 {
 .button button:hover {
     background-image: linear-gradient(to right, #61045f, #aa076b);
 }
-
-@media(max-width:600px) {
-    .contact {
-        min-width: 280px;
-    }
-
-    .content {
-        max-height: 380px;
-        overflow: auto;
-    }
-
-    .input-box {
-        margin-bottom: 12px;
-        width: 100%;
-    }
-
-    .input-box:nth-child(2n) {
-        justify-content: space-around;
-    }
-
-    .content::-webkit-scrollbar {
-        width: 0;
-    }
-}
-
-
 
 footer {
     background-color: black;
