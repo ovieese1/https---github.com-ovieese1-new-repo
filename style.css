@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
 * {
     margin: 0;
     border: 0;
@@ -6,8 +8,6 @@
     box-sizing: border-box;
 }
 
-
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
 
 body {
     background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
@@ -50,13 +50,6 @@ body {
 
 }
 
-@media only screen and (max-width:720px) {
-    nav {
-        display: none;
-    }
-
-}
-
 
 .center {
     display: flex;
@@ -85,7 +78,7 @@ body {
     grid-template-rows: auto;
     grid-template-areas:
         "nav nav nav"
-        "main main aside"
+        "main main main"
         "footer footer footer";
 
 
@@ -99,12 +92,14 @@ nav {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 10px;
     margin: 0;
+    display: none;
 }
 
 nav ul {
     display: flex;
     justify-content: space-evenly;
 }
+
 
 .dropdown ul,
 .dropdown li {
@@ -144,7 +139,7 @@ nav ul {
     left: 0;
     opacity: 0;
     position: absolute;
-    top: 35px;
+    top: 100%;
     visibility: hidden;
     z-index: 1;
 }
@@ -157,7 +152,7 @@ li:hover ul#submenu {
 }
 
 #submenu li {
-    float: none;
+    float: left;
     width: 100%;
 }
 
@@ -169,6 +164,64 @@ li:hover ul#submenu {
     background: #34495e;
 }
 
+/*mobile nav style*/
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        top: 40px; /* Adjust as needed */
+        left: 0;
+        z-index: 1000;
+    }
+
+    .menu-toggle:checked + .menu {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        background-color: red;
+    }
+}
 
 
 main {
@@ -182,6 +235,36 @@ main {
 
 }
 
+/*project page style*/
+.pro {
+    width: 80%;
+    height: 50vh;
+    margin: auto ;
+    padding: 0;
+}
+
+.ptop,
+.pbottom {
+    width: 96%;
+    height: 30vh;
+    margin: 60px;
+    margin-top: auto;
+}
+
+.pro1,
+.pro2,
+.pro3,
+.pro4 {
+    display: inline;
+    float: left;
+    width: 46%;
+    height: 96%;
+    border-radius: 30px;
+    margin: 2%;
+    background-color: white;
+    opacity: 0.4;
+
+}
 
 
 
@@ -190,17 +273,12 @@ main {
     width: 650px;
     padding: 28px;
     margin-top: 900px;
-    margin: 0 28px;
+    margin: 0 auto;
     overflow: hidden;
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
     height: 500px;
-    margin: auto;
-
-
-
-
 }
 
 h2 {
@@ -253,6 +331,7 @@ h2 {
     margin-left: 12px;
 }
 
+
 .contact form textarea {
     padding: 15px;
     border-radius: 5px;
@@ -279,8 +358,6 @@ h2 {
     margin-top: 35px;
     display: flex;
     justify-content: center;
-
-
 }
 
 .button button {
